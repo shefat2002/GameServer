@@ -2,10 +2,7 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var cache = builder.AddRedis("cache");
 
-var username = builder.AddParameter("keycloak-username", "admin");
-var password = builder.AddParameter("keycloak-password", "admin", secret:true);
-
-var keycloak = builder.AddKeycloak("keycloak", 8080, username, password)
+var keycloak = builder.AddKeycloak("keycloak", 8080)
     .WithDataVolume();
 
 var apiService = builder.AddProject<Projects.GameServer_ApiService>("apiservice")
