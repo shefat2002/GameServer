@@ -1,0 +1,21 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.1.0">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <UserSecretsId>314afd98-c88e-4287-aea1-1d039af67427</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\GameServer.ApiService\GameServer.ApiService.csproj"/>
+        <ProjectReference Include="..\GameServer.Web\GameServer.Web.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Hosting.Keycloak" Version="13.1.0-preview.1.25616.3" />
+        <PackageReference Include="Aspire.Hosting.Redis" Version="13.1.0"/>
+    </ItemGroup>
+
+</Project>
